@@ -1,1 +1,1097 @@
-Salut<br>toi
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat avec l'API ParallelDots</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 90vh;
+     
+    }
+
+    #chat-container {
+      width: 500px;
+      background-color: #fff;
+      border-radius: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    #chat-header {
+      background-color: #007bff;
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+      font-size: 1.5rem;
+      border-bottom: 3px solid #0056b3;
+    }
+
+    #chat-output {
+      height: 500px;
+      overflow-y: scroll;
+      padding: 15px;
+    }
+
+    .message {
+      padding: 10px;
+      margin: 10px;
+      border-radius: 10px;
+      max-width: 80%;
+    }
+
+    .user-message {
+      background-color: #f0f0f0;
+      align-self: flex-end;
+    }
+
+    .bot-message {
+      background-color: #e2f7fd;
+    }
+
+    #user-input-container {
+      display: flex;
+      padding: 15px;
+    }
+
+    #user-input {
+      flex: 1;
+      padding: 10px;
+      margin-right: 15px;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      outline: none;
+    }
+
+    #send-button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    #send-button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div id="chat-container">
+    <div id="chat-header">Issiako Service Chatbot🤖</div>
+    <div id="chat-output"></div>
+    <div id="user-input-container">
+      <input type="text" id="user-input" placeholder="Posez une question...">
+      <button id="send-button" onclick="sendMessage()">Envoyer</button>
+    </div>
+  </div>
+
+
+  <script>
+  
+var position = {};
+var espo ={};
+var retour = {};
+var tel = {} ;
+var cv = {} ;
+var nmbr = {} ;
+var precedant = {} ;
+  //la fonction pour envoyer un message
+  function sendMessage() {
+var lieu = position.lieu
+
+  
+      var userInput = document.getElementById('user-input').value;
+      let chatOutput = document.getElementById('chat-output');
+document.getElementById('user-input').value = '';
+var fonctionactiver = lieu+userInput;
+
+      chatOutput.innerHTML += '<p class="user-message"><strong>👤Vous:</strong> ' + userInput + '</p>';
+if(userInput=="retour" || userInput=="Retour" ){
+if(retour.lieu == "a"){
+acceuil()
+}else if(retour.lieu == "a1"){
+acceuil1();
+}else if(retour.lieu == "a11"){
+acceuil11();
+}else if(retour.lieu == "a111"){
+acceuil111();
+}else if(retour.lieu == "a1111"){
+acceuil1111();
+}else if(retour.lieu == "a11111"){
+acceuil11111();
+}else if(retour.lieu == "a111111"){
+acceuil111111();
+//retour pour a2
+}else if(retour.lieu == "a2"){
+acceuil2();
+
+//retour pour a3
+}else if(retour.lieu == "a3"){
+acceuil3();
+}else if(retour.lieu == "a31"){
+acceuil31();
+}else{
+simulateTyping('<p><strong>🤖Issiako_Service:</strong> Retour n\'est pas disponible Ici vous êtes à  l\'accueil</p>')}
+}else{
+if(fonctionactiver=="acceuil1"){
+ 
+acceuil1();
+}else if(fonctionactiver=="acceuil11"){ 
+
+acceuil11()
+}else if(lieu=="saisiea11"){
+
+espo.theme = userInput;
+acceuil111()
+}else if(lieu=="saisiea111"){
+espo.plan = userInput;
+acceuil1111()
+}else if(lieu=="saisiea1111"){
+espo.prof = userInput;
+acceuil11111();
+}else if(lieu=="saisiea11111"){
+espo.membres=userInput;
+acceuil111111();
+}else if(lieu=="saisiea111111"){
+espo.contacts = userInput;
+acceuil1111111();
+}else if(lieu=="saisiea1111111"){
+espo.classe = userInput;
+acceuil11111111(); 
+}else if(fonctionactiver=="acceuil111111111"){ 
+
+acceuil111111111()
+
+//début de acceuil 2...........
+}else if(fonctionactiver=="acceuil2"){
+acceuil2();
+}else if(fonctionactiver=="acceuil21"){
+acceuil21()
+}else if(lieu=="saisiea21"){
+cv.nom = userInput;
+acceuil211()
+}else if(lieu=="saisiea211"){
+cv.conctacts = userInput;
+acceuil2111()
+}else if(lieu=="saisiea2111"){
+alert(userInput);
+if(userInput == 1){
+alert("salut fonction 1 est exécuté")
+precedant.optioncursus = 2 ;
+nmbr.optioncursus = 2; 
+cepannees()
+}else if(userInput == 2){
+alert("salut fonction 2 est exécuté")
+precedant.optioncursus = 4 ;
+nmbr.optioncursus = 4; 
+cepannees()
+}else if(userInput == 3){
+alert("salut fonction 3 est exécuté")
+precedant.optioncursus = 6 ;
+nmbr.optioncursus = 6; 
+cepannees()
+}else if(userInput == 4){
+alert("salut fonction 4 est exécuté")
+precedant.optioncursus = 8 ;
+nmbr.optioncursus = 8; 
+cepannees()
+}else if(userInput == 5){
+alert("salut fonction 5 est exécuté")
+precedant.optioncursus = "aucun";
+nmbr.optioncursus = "aucun"; 
+niveau()
+}else{ 
+simulateTyping('<p><strong>🤖Issiako_Service:</strong> Le numéro choisi est incorrect😔\, veuillez choisir le numéro correspondant a votre niveau d\'étude</p>')}
+}else if(lieu == "cepannees"){
+cv.cepannees = userInput ;
+cepetablissement()
+}else if(lieu == "cepetablissement"){
+cv.cepetablissement = userInput ;
+if(nmbr.optioncursus == 6 ){
+bepcannees()
+}else if(nmbr.optioncursus == 4){
+bepcannees()
+}else if(nmbr.optioncursus == 2){
+bepcannees()
+}else if(nmbr.optioncursus == 0){
+niveau()
+}else{ 
+simulateTyping('<p><strong> Une erreur c\'est produite 😔 veuillez réessayer </p>')}
+}else if(lieu == "bepcannees"){
+cv.bepcannees = userInput ;
+bepcetablissement()
+}else if(lieu == "bepcetablissement"){
+cv.bepcetablissement = userInput ;
+if(nmbr.optioncursus == 4 ){
+bacannees()
+}else if(nmbr.optioncursus == 2){
+bacannees()
+}else if(nmbr.optioncursus == 0){
+niveau()
+ }else{ 
+simulateTyping('<p><strong> Une erreur c\'est produite 😔 veuillez réessayer </p>')}
+}else if(lieu == "bacannees"){
+cv.bacannees = userInput ;
+bacetablissement() 
+
+}else if(lieu == "bacetablissement"){
+cv.bacetablissement = userInput ;
+if(nmbr.optioncursus == 4 ){
+licencannees()
+}else if(nmbr.optioncursus == 2){
+licencannees()
+}else if(nmbr.optioncursus == 0){
+niveau()
+}else{ 
+simulateTyping('<p><strong> Une erreur c\'est produite 😔 veuillez réessayer </p>')}
+}else if(lieu == "licencannees"){
+cv.licencannees = userInput ;
+licencetablissement() 
+}else if(lieu == "licencetablissement"){
+cv.licencetablissement = userInput ;
+formation()
+
+}else if(lieu == "niveau"){
+
+if(precedant.niveau == "cp1cm2"){
+if(userInput == 1 ){
+cv.niveau = "CP1"
+niveauannee()
+}else if(userInput == 2 ){
+cv.niveau = "CP2"
+niveauannee()
+}else if(userInput == 3 ){
+cv.niveau = "CE1"
+niveauannee()
+}else if(userInput == 4 ){
+cv.niveau = "CE2"
+niveauannee()
+}else if(userInput == 5 ){
+cv.niveau = "CM1"
+niveauannee()
+}else if(userInput == 6 ){
+cv.niveau = "CM2"
+niveauannee()
+}else if(userInput == 7 ){
+cv.niveau = "aucun"
+formation()
+}else{
+simulateTyping('<p><strong>🤖Issiako_Service:</strong>Désolé 😔 \,Une erreur c\'est produite il se peut que le numéro choisi est incorrect\, veuillez vérifier et ressayer \!\!</p>')
+}
+}else if(precedant.niveau == "ceptroisieme"){
+if(userInput == 1 ){
+cv.niveau = "6 ème"
+niveauannee()
+}else if(userInput == 2){
+cv.niveau = "5 ème "
+niveauannee()
+}else if(userInput == 3){
+cv.niveau = "4 ème"
+niveauannee()
+}else if(userInput == 4){
+cv.niveau = "3 ème"
+niveauannee()
+}else if(userInput == 5){
+cv.niveau = "cep"
+formation()
+}else{
+simulateTyping('<p><strong>🤖Issiako_Service:</strong>Désolé 😔 \,Une erreur c\'est produite il se peut que le numéro choisi est incorrect\, veuillez vérifier et ressayer \!\!</p>')}
+
+
+}else if(precedant.niveau == "bepcterminal"){
+if(userInput == 1 ){
+cv.niveau = "2nd"
+niveauannee()
+}else if(userInput == 2){
+cv.niveau = "1ère"
+niveauannee()
+}else if(userInput == 3){
+cv.niveau = "Terminal"
+niveauannee()
+}else if(userInput == 4){
+cv.niveau = "bepc"
+formation()
+}else{
+simulateTyping('<p><strong>🤖Issiako_Service:</strong>Désolé 😔 \,Une erreur c\'est produite il se peut que le numéro choisi est incorrect\, veuillez vérifier et ressayer \!\!</p>')}
+
+}else if(precedant.niveau == "bacuniversite"){
+if(userInput == 1 ){
+cv.niveau = "1ère année"
+niveauannee()
+}else if(userInput == 2){
+cv.niveau = "2ème année"
+niveauannee()
+}else if(userInput == 3){
+cv.niveau = "3ème année"
+niveauannee()
+}else if(userInput == 4){
+cv.niveau = "bac"
+formation()
+}else{
+simulateTyping('<p><strong>🤖Issiako_Service:</strong>Désolé 😔 \,Une erreur c\'est produite il se peut que le numéro choisi est incorrect\, veuillez vérifier et ressayer \!\!</p>')}
+}else{
+simulateTyping('<p><strong>🤖Issiako_Service:</strong>Désolé 😔 \,Une erreur c\'est produite il se peut que le numéro choisi est incorrect\, veuillez vérifier et ressayer \!\!</p>')}
+}else if(lieu == "niveauannee"){
+cv.niveauannee = userInput
+niveauetablissement()
+}else if(lieu == "niveauetablissement"){
+cv.niveauetablissement = userInput;
+if(cv.niveau == "1ère année" || cv.niveau == "2ème année" || cv.niveau == "3ème année"){
+position.lieu = "naturelicence"
+simulateTyping('<p><strong>🤖Issiako_Service:</strong> <br> Ok si j\'ai bien compris vous avez fait votre ' + cv.niveau + ' à ' + cv.niveauetablissement + ' en ' + cv.niveauannee + ' d\'accord maintenant quel était votre filière\?\?\, exemple : Géographie \; Lettre modernes </p>')
+}else{
+formation()
+}
+}else if(lieu == "naturelicence"){
+cv.niveaulicencenature = userInput ;
+formation()
+}else if(lieu == "formation"){
+let mot1 = "Oui";
+let mot2 = "oui";
+let mot3 = "wi";
+let mot4 = "Wi";
+let mot5 = "Non";
+let mot6 = "non";
+let mot7 = "nn";
+let mot8 = "Nn";
+nmbr.formation = 0
+if(userInput.includes(mot1) || userInput.includes(mot2) || userInput.includes(mot3) || userInput.includes(mot4)){
+
+    
+    formationnom()
+}else if(userInput.includes(mot5) || userInput.includes(mot6) || userInput.includes(mot7) || userInput.includes(mot8)) {
+    
+    experience()
+}else{
+simulateTyping('<p><strong>🤖Issiako_Service:</strong> Désolé 😔 j\'ai pas compris votre requête essayer de répondre simplement par oui où non </p>')}
+}else if(lieu == "formationnom"){
+let mot9 = "Fini";
+let mot10 = "fini";
+let mot11 = "fini";
+let mot12 = "Fini";
+let mot13 = "Fin";
+let mot14 = "fin";
+if(userInput.includes(mot9) || userInput.includes(mot10) || userInput.includes(mot11) || userInput.includes(mot12)  || userInput.includes(mot13)  || userInput.includes(mot14)){
+experience()
+}else{
+if(nmbr.formation == 1){
+alert("formation 1")
+cv.formationnom1= userInput
+precedant.formationnom = cv.formationnom1 ;
+formationannee()
+}else if(nmbr.formation == 2){
+cv.formationnom2= userInput
+precedant.formationnom = cv.formationnom2 ;
+formationannee()
+}else if(nmbr.formation == 3){
+cv.formationnom3= userInput
+precedant.formationnom = cv.formationnom3 ;
+formationannee()
+}else if(nmbr.formation == 4){
+cv.formationnom4= userInput
+precedant.formationnom = cv.formationnom4 ;
+formationannee()
+}else if(nmbr.formation == 5){
+cv.formationnom5= userInput
+precedant.formationnom = cv.formationnom5 ;
+formationannee()
+}else if(nmbr.formation == 6){
+cv.formationnom6= userInput
+precedant.formationnom = cv.formationnom6 ;
+formationannee()
+}else if(nmbr.formation == 7){
+cv.formationnom7= userInput
+precedant.formationnom = cv.formationnom7 ;
+formationannee()
+}else if(nmbr.formation == 8){
+cv.formationnom8= userInput
+precedant.formationnom = cv.formationnom8 ;
+formationannee()
+}else if(nmbr.formation == 9){
+cv.formationnom9= userInput
+precedant.formationnom = cv.formationnom9 ;
+formationannee()
+}else if(nmbr.formation == 10){
+cv.formationnom10= userInput
+precedant.formationnom = cv.formationnom10 ;
+formationannee()
+}else if(nmbr.formation == 11){
+cv.formationnom11= userInput
+precedant.formationnom = cv.formationnom11 ;
+formationannee()
+}else if(nmbr.formation == 12){
+cv.formationnom12= userInput
+precedant.formationnom = cv.formationnom12 ;
+formationannee()
+}else if(nmbr.formation == 13){
+cv.formationnom13= userInput
+precedant.formationnom = cv.formationnom13 ;
+formationannee()
+}else if(nmbr.formation == 14){
+cv.formationnom14= userInput
+precedant.formationnom = cv.formationnom14 ;
+formationannee()
+}else if(nmbr.formation == 15){
+cv.formationnom15= userInput
+precedant.formationnom = cv.formationnom15 ;
+formationannee()
+}else{
+alert("vous ne pouvez pas faire plus de 15 formation pour le moment")}}
+}else if(lieu == "formationannee"){
+if(nmbr.formation == 1){
+alert("formation 1")
+cv.formationannee1= userInput
+precedant.formationanne = cv.formationannee1 ;
+formationdiplome()
+}else if(nmbr.formation == 2){
+cv.formationannee2= userInput
+precedant.formationannee = cv.formationannee2 ;
+formationdiplome()
+}else if(nmbr.formation == 3){
+cv.formationannee3= userInput
+precedant.formationannee = cv.formationannee3 ;
+formationdiplome()
+}else if(nmbr.formation == 4){
+cv.formationannee4= userInput
+precedant.formationannee = cv.formationannee4 ;
+formationdiplome()
+}else if(nmbr.formation == 5){
+cv.formationannee5= userInput
+precedant.formationannee = cv.formationannee5 ;
+formationdiplome()
+}else if(nmbr.formation == 6){
+cv.formationannee6= userInput
+precedant.formationannee = cv.formationannee6 ;
+formationdiplome()
+}else if(nmbr.formation == 7){
+cv.formationannee7= userInput
+precedant.formationannee = cv.formationannee7 ;
+formationdiplome()
+}else if(nmbr.formation == 8){
+cv.formationannee8= userInput
+precedant.formationannee = cv.formationannee8 ;
+formationdiplome()
+}else if(nmbr.formation == 9){
+cv.formationannee10= userInput
+precedant.formationannee = cv.formationannee10 ;
+formationdiplome()
+}else if(nmbr.formation == 11){
+cv.formationannee11= userInput
+precedant.formationannee = cv.formationannee11 ;
+formationdiplome()
+}else if(nmbr.formation == 12){
+cv.formationannee12= userInput
+precedant.formationannee = cv.formationannee12 ;
+formationdiplome()
+}else if(nmbr.formation == 13){
+cv.formationannee13= userInput
+precedant.formationannee = cv.formationannee13 ;
+formationdiplome()
+}else if(nmbr.formation == 14){
+cv.formationannee14= userInput
+precedant.formationannee = cv.formationannee14 ;
+formationdiplome()
+}else if(nmbr.formation == 15){
+cv.formationannee15= userInput
+precedant.formationannee = cv.formationannee15 ;
+formationdiplome()
+}else{
+simulateTyping('<p><strong>🤖Issiako_Service:</strong> Désolé 😔 nous avons rencontré une erreur durant l\'analyse de vos données \, veuillez ressayer \!\!</p>')}
+}else if(lieu == "formationdiplome"){
+let mot13 = "Non";
+let mot14 = "non";
+let mot15 = "Nn";
+let mot16 = "nn";
+if(userInput.includes(mot13) || userInput.includes(mot14) || userInput.includes(mot15) || userInput.includes(mot16)){
+if(nmbr.formation == 1){
+alert("formation 1")
+cv.formationdiplome1= "aucun"
+precedant.formationdiplome = cv.formationdiplome1 ;
+formationlieu()
+}else if(nmbr.formation == 2){
+cv.formationdiplome2= "aucun"
+precedant.formationdiplome = cv.formationdiplome2 ;
+formationlieu()
+}else if(nmbr.formation == 3){
+cv.formationdiplome3= "aucun"
+precedant.formationdiplome = cv.formationdiplome3 ;
+formationlieu()
+}else if(nmbr.formation == 4){
+cv.formationdiplome4= "aucun"
+precedant.formationdiplome = cv.formationdiplome4 ;
+formationlieu()
+}else if(nmbr.formation == 5){
+cv.formationdiplome5= "aucun"
+precedant.formationdiplome = cv.formationdiplome5 ;
+formationlieu()
+}else if(nmbr.formation == 6){
+cv.formationdiplome6= "aucun"
+precedant.formationdiplome = cv.formationdiplome6 ;
+formationlieu()
+}else if(nmbr.formation == 7){
+cv.formationdiplome7= "aucun"
+precedant.formationdiplome = cv.formationdiplome7 ;
+formationlieu()
+}else if(nmbr.formation == 8){
+cv.formationdiplome8= "aucun"
+precedant.formationdiplome = cv.formationdiplome8 ;
+formationlieu()
+}else if(nmbr.formation == 9){
+cv.formationdiplome9= "aucun"
+precedant.formationdiplome = cv.formationdiplome9 ;
+formationlieu()
+}else if(nmbr.formation == 10){
+cv.formationdiplome10= "aucun"
+precedant.formationdiplome = cv.formationdiplome10 ;
+formationlieu()
+}else if(nmbr.formation == 11){
+cv.formationdiplome11= "aucun"
+precedant.formationdiplome = cv.formationdiplome11 ;
+formationlieu()
+}else if(nmbr.formation == 12){
+cv.formationdiplome12= "aucun"
+precedant.formationdiplome = cv.formationdiplome12 ;
+formationlieu()
+}else if(nmbr.formation == 13){
+cv.formationdiplome13= "aucun"
+precedant.formationdiplome = cv.formationdiplome13 ;
+formationlieu()
+}else if(nmbr.formation == 14){
+cv.formationdiplome14= "aucun"
+precedant.formationdiplome = cv.formationdiplome14 ;
+formationlieu()
+}else if(nmbr.formation == 15){
+cv.formationdiplome15= "aucun"
+precedant.formationdiplome = cv.formationdiplome15 ;
+formationlieu()
+}else{
+simulateTyping('<p><strong>🤖Issiako_Service:</strong> Désolé 😔 nous avons rencontré une erreur durant l\'analyse de vos données \, veuillez </p>')}
+
+
+}else{
+if(nmbr.formation == 1){
+alert("formation 1")
+cv.formationdiplome1= userInput;
+precedant.formationdiplome = cv.formationdiplome1 ;
+formationlieu()
+}else if(nmbr.formation == 2){
+cv.formationdiplome2= userInput;
+precedant.formationdiplome = cv.formationdiplome2 ;
+formationlieu()
+}else if(nmbr.formation == 3){
+cv.formationdiplome3= userInput;
+precedant.formationdiplome = cv.formationdiplome3 ;
+formationlieu()
+}else if(nmbr.formation == 4){
+cv.formationdiplome4= userInput;
+precedant.formationdiplome = cv.formationdiplome4 ;
+formationlieu()
+}else if(nmbr.formation == 5){
+cv.formationdiplome5= userInput;
+precedant.formationdiplome = cv.formationdiplome5 ;
+formationlieu()
+}else if(nmbr.formation == 6){
+cv.formationdiplome6= userInput;
+precedant.formationdiplome = cv.formationdiplome6 ;
+formationlieu()
+}else if(nmbr.formation == 7){
+cv.formationdiplome7= userInput;
+precedant.formationdiplome = cv.formationdiplome7 ;
+formationlieu()
+}else if(nmbr.formation == 8){
+cv.formationdiplome8= userInput;
+precedant.formationdiplome = cv.formationdiplome8 ;
+formationlieu()
+}else if(nmbr.formation == 9){
+cv.formationdiplome9= userInput;
+precedant.formationdiplome = cv.formationdiplome9 ;
+formationlieu()
+}else if(nmbr.formation == 10){
+cv.formationdiplome10= userInput;
+precedant.formationdiplome = cv.formationdiplome10 ;
+formationlieu()
+}else if(nmbr.formation == 11){
+cv.formationdiplome11= userInput;
+precedant.formationdiplome = cv.formationdiplome11 ;
+formationlieu()
+}else if(nmbr.formation == 12){
+cv.formationdiplome12= userInput;
+precedant.formationdiplome = cv.formationdiplome12 ;
+formationlieu()
+}else if(nmbr.formation == 13){
+cv.formationdiplome13= userInput;
+precedant.formationdiplome = cv.formationdiplome13 ;
+formationlieu()
+}else if(nmbr.formation == 14){
+cv.formationdiplome14= userInput;
+precedant.formationdiplome = cv.formationdiplome14 ;
+formationlieu()
+}else if(nmbr.formation == 15){
+cv.formationdiplome15= userInput
+precedant.formationdiplome = cv.formationdiplome15 ;
+formationlieu()
+}else{
+simulateTyping('<p><strong>🤖Issiako_Service:</strong> Désolé 😔 nous avons rencontré une erreur durant l\'analyse de vos données \, veuillez </p>')}
+
+}
+}else if(lieu == "formationlieu"){
+if(nmbr.formation == 1){
+cv.formationlieu1= userInput;
+precedant.formationlieu = cv.formationlieu1 ;
+formationnom()
+}else if(nmbr.formation == 2){
+cv.formationlieu2= userInput;
+precedant.formationlieu = cv.formationlieu2 ;
+formationnom()
+}else if(nmbr.formation == 3){
+cv.formationlieu3= userInput;
+precedant.formationlieu = cv.formationlieu3 ;
+formationnom()
+}else if(nmbr.formation == 4){
+cv.formationlieu4= userInput;
+precedant.formationlieu = cv.formationlieu4 ;
+formationnom()
+}else if(nmbr.formation == 5){
+cv.formationlieu5= userInput;
+precedant.formationlieu = cv.formationlieu5 ;
+formationnom()
+}else if(nmbr.formation == 6){
+cv.formationlieu6= userInput;
+precedant.formationlieu = cv.formationlieu6 ;
+formationnom()
+}else if(nmbr.formation == 7){
+cv.formationlieu7= userInput;
+precedant.formationlieu = cv.formationlieu7 ;
+formationnom()
+}else if(nmbr.formation == 8){
+cv.formationlieu8= userInput;
+precedant.formationlieu = cv.formationlieu8 ;
+formationnom()
+}else if(nmbr.formation == 9){
+cv.formationlieu9= userInput;
+precedant.formationlieu = cv.formationlieu9 ;
+formationnom()
+}else if(nmbr.formation == 10){
+cv.formationlieu10= userInput;
+precedant.formationlieu = cv.formationlieu10 ;
+formationnom()
+}else if(nmbr.formation == 11){
+cv.formationlieu2= userInput;
+precedant.formationlieu = cv.formationlieu11 ;
+formationnom()
+}else if(nmbr.formation == 12){
+cv.formationlieu12= userInput;
+precedant.formationlieu = cv.formationlieu12 ;
+formationnom()
+}else if(nmbr.formation == 13){
+cv.formationlieu13= userInput;
+precedant.formationlieu = cv.formationlieu13 ;
+formationnom()
+}else if(nmbr.formation == 14){
+cv.formationlieu14= userInput;
+precedant.formationlieu = cv.formationlieu14 ;
+formationnom()
+}else if(nmbr.formation == 15){
+cv.formationlieu15= userInput;
+precedant.formationlieu = cv.formationlieu15 ;
+formationnom()
+}else{
+simulateTyping('<p><strong>🤖Issiako_Service:</strong> Désolé 😔 nous avons rencontré une erreur durant l\'analyse de vos données \, veuillez </p>')}
+}else if(lieu == "experience"){
+let mot1 = "Oui";
+let mot2 = "oui";
+let mot3 = "wi";
+let mot4 = "Wi";
+let mot5 = "Non";
+let mot6 = "non";
+let mot7 = "nn";
+let mot8 = "Nn";
+nmbr.experience = 0
+if(userInput.includes(mot1) || userInput.includes(mot2) || userInput.includes(mot3) || userInput.includes(mot4)){
+    experiencelieu()
+}else if(userInput.includes(mot5) || userInput.includes(mot6) || userInput.includes(mot7) || userInput.includes(mot8)) {
+    personnereference()
+}else
+simulateTyping('<p><strong>🤖Issiako_Service:</strong> Désolé 😔 j\'ai pas compris votre requête essayer de répondre simplement par oui où non </p>')}
+}else if(lieu == "experiencelieu"){
+if(nmbr.experience == 1){
+cv.experiencelieu1= userInput;
+precedant.experience = cv.experiencelieu1 ;
+experiencetache()
+}else if(nmbr.experience == 2){
+cv.experiencelieu2= userInput;
+precedant.experience = cv.experiencelieu2 ;
+experiencetache()
+
+//début de acceuil 3
+}else if(fonctionactiver=="acceuil3"){
+acceuil3();
+}else if(fonctionactiver=="acceuil31"){
+acceuil31()
+}else if(fonctionactiver=="acceuil311"){
+acceuil311()
+}else if(fonctionactiver=="acceuil32"){
+acceuil32()
+}else if(fonctionactiver=="acceuil321"){
+acceuil321()
+}else if(lieu=="saisiea321"){
+tel.marque = userInput;
+acceuil3211();
+}else if(fonctionactiver=="acceuil32111"){
+acceuil32111()
+}else if(lieu=="saisiea32111"){
+tel.prix = userInput;
+acceuil321111();
+}else if(lieu=="saisiea321111"){
+tel.contact = userInput;
+acceuil3211111();
+}else if(fonctionactiver=="acceuil32111111"){
+acceuil32111111()
+}else{
+simulateTyping('<p><strong>🤖Issiako_Service:</strong> Le numéro choisi est incorrect😔\, veuillez vérifier et ressayer \!\!</p>')
+
+      }
+
+      }}
+ 
+
+//fin de la fontion envoyé un message
+
+
+//la fonction accueil
+    function acceuil() {
+    retour.lieu = 0 ;
+     position.lieu = "acceuil";
+      var interface = document.getElementById('chat-output');
+      simulateTyping('<p><strong>🤖Issiako_Service:</strong> Salut👋,Bienvenue chez Issiako service!<br>Tapez sur le numéro correspondant à votre choix:<br>1-Etudes <br>2-Emploi <br>3-Commerce <br>4-Paris sportif <br>5-Devenir notre partenaire</p>');
+;
+   }
+    
+    //la fin de la fonction accueil
+
+
+    //fonction pour repondre 
+    function simulateTyping(message) {
+      let words = message.split(' ');
+      let i = 0;
+      let chatOutput = document.getElementById('chat-output');
+
+      function typeNextWord() {
+        if (i < words.length) {
+          chatOutput.innerHTML += words[i] + ' ';
+          i++;
+          setTimeout(typeNextWord, 200); // Adjust the delay as needed
+        }
+      }
+      var element = document.getElementById('chat-output');
+            element.scrollIntoView({ behavior: 'smooth', block: 'end' }); // Faites défiler de manière fluide vers le bas de l'élément cible
+
+      typeNextWord();
+    }
+    
+
+
+  </script>
+
+  <script>
+
+    acceuil();
+  </script>
+<script>
+function acceuil1(){
+retour.lieu = "a";
+position.lieu = "acceuil1";
+
+simulateTyping('<p><strong>🤖Issiako_Service:</strong> Ok, choisissez :<br>1-Faire un exposé <br>2-Resoudre des opérations <br>3-Autres <br>4-Retour</p>');
+}
+function acceuil11(){
+retour.lieu = "a1";
+position.lieu = "saisiea11";
+simulateTyping('<p><strong>🤖Issiako_Service:</strong> Ok, écrivez le thème de votre exposé </p>')
+}
+function acceuil111(){
+retour.lieu = "a11";
+position.lieu = "saisiea111";
+simulateTyping('<p><strong>🤖Issiako_Service:</strong> Votre thème est : \<\<<u><b>' + espo.theme + '\>\></b></u> maintenant avez vous un plan? si oui écrivez le plan sinon ecrivez non ; nous allons créer un plan pour vous</p>')}
+function acceuil1111(){
+retour.lieu = "a111";
+position.lieu ="saisiea1111";
+simulateTyping('<p><strong>🤖Issiako_Service:</strong> ok ; Plan: ' + espo.plan + '<br> Maintenant dite moi le nom de votre professeur et la matière enseignés. Exemple : Monsieur Bokoum ; Français<p>')
+}
+function acceuil11111(){
+retour.lieu = "a1111";
+position.lieu ="saisiea11111";
+simulateTyping('<p><strong>🤖Issiako_Service:</strong> Bien, le nom de votre prof et de sa matière sont : '+ espo.prof + ' citer moi les noms des membres de votre groupe :</p>')
+}
+function acceuil111111(){
+retour.lieu = "a11111";
+position.lieu ="saisiea111111";
+simulateTyping('<p><strong>🤖Issiako_Service:</strong> Donc les noms des membres de votre groupe sont : <br>' + espo.membres + ' Très bien maintenant donnez nous un numéro de téléphone sur lequel nous pouvons vous contacter , si possible un numéro WhatsApp.</p>')
+}
+function acceuil1111111(){
+retour.lieu = "a111111";
+position.lieu = "saisiea1111111";
+simulateTyping('<p><strong>🤖Issiako_Service:</strong>Ok c est noté , maintenant dite moi le nom de votre Établissement et votre classe : </p>') }
+
+function acceuil11111111(){
+retour.lieu = "a11111111";
+position.lieu = "acceuil11111111"
+simulateTyping('<p><strong>🤖Issiako_Service:</strong> Enfin voici les données de votre esposé :<b>THÈME</b> : ' + espo.theme + '<br> <b>Plan</b> :' + espo.plan + ' <br> <b>Nom du prof et Matière<b> :' + espo.prof + '<br> <u><b>Liste <u><b>des <u><b>membres<u><b> du <u><b>groupe</u><br>' + espo.membres + '</center> vérifier si les informations sont correctes sachez que la rédaction de votre esposé s élève a 2500F  si vous êtes d accord taper sur 1 et validée pour commencer la rédaction de votre espsé si vous ne comprenez pas veuillez nous appeler au 54 64 15 31  73 71 32 52 </p>')}
+function acceuil111111111(){
+alert("valider")
+
+       
+ var currentDate = new Date();
+var currentHour = currentDate.getHours();
+var currentMinute = currentDate.getMinutes();
+var minutesmax = currentMinute + 45 ;
+
+            var message = 'Salut ; Je solicite la rédaction de mon esposé dont les données sont : THÈME : ' + espo.theme + 
+ ' PLAN : ' + espo.plan +  
+ 'NOM DES MEMBRES : ' + espo.membres + 
+ 'NOM DU PROF ET MATIÈRE : ' + espo.prof + 
+ 'TELEPHONE : ' + espo.contacts + 
+ ' Date et heure : le ' + currentHour + 'H'+ currentMinute
+            var botToken = '6379875737:AAEoxqoFnYJMftKZNhCCxlHQ_sd4Hj41qTc';
+            var chatId = '6143012351'; // Remplacez par l'ID de votre chat Telegram
+
+            var url = 'https://api.telegram.org/bot' + botToken + '/sendMessage?chat_id=' + chatId + '&text=' + encodeURIComponent(message);
+
+            // Utilisez une requête AJAX ou Fetch pour envoyer la requête au serveur Telegram
+            // Par exemple, avec Fetch :
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+             simulateTyping('<p><strong>🤖Issiako_Service:</strong>Succès ✅✅<br> Votre demande de rédaction d exposé est en cours d ici ' + minutesmax + ' minutes si nous vous notifions pas veuillez nous contacter sur ces numéros : <br> Telmob : 54 64 15 31<br>  Orange : 73 71 32 52 </p>')    
+                })
+                .catch(error => {
+                    simulateTyping('<p><strong>🤖Issiako_Service:</strong> Désolé votre demande a été rejeté😔 veillez vérifier si vous avez un accès a internet ou connectez vous à un Wifi et taper 1 pui réenvoyer</p> ')
+                    
+                });
+        }
+
+
+//début des fonctions de acceuil2
+function acceuil2(){
+retour.lieu = "a" ;
+position.lieu = "acceuil2"
+simulateTyping('<p><strong>🤖Issiako_Service:</strong>Ok choisissez : <br>1-Faire un cv<br>  2-Faire une lettre de motivation<br> 3-Faire un dépôt de dossier de candidature par email<br> 4-Trouver un poste vacant </p>');}
+
+function acceuil21(){
+retour.lieu = "a2" ;
+position.lieu = "saisiea21"
+simulateTyping('<p><strong>🤖Issiako_Service:</strong> Vous voulez faire un CV \, Ok dite moi quel est votre nom complet </p>')
+}
+function acceuil211(){
+retour.lieu = "a21" ;
+position.lieu = "saisiea211"
+simulateTyping('<p><strong>🤖Issiako_Service:</strong> ok \!' + cv.nom + ' maintenant donnez moi vos contacts </p>')
+}
+function acceuil2111(){
+retour.lieu = "a211" ;
+position.lieu ="saisiea2111";
+
+simulateTyping('<p><strong> Ok dite nous quel est votre niveau scolaire 🧑‍🎓 <br> 1-CEP <br> 2-BEPC <br> 3-BAC <br> 4-Licence <br> 5-Aucun </p>')
+}
+
+//debut de  acceuil3
+function acceuil3(){
+retour.lieu = "a" ;
+position.lieu = "acceuil3"
+simulateTyping('<p><strong>🤖Issiako_Service:</strong> <br>Ok choisissez ; <br>1-Achetez <br> 2-vendre</p>')
+}
+function acceuil311(){
+retour.lieu = "a31" ;
+position.lieu = "acceuil311"
+simulateTyping('<p><strong>🤖Issiako_Service:</strong>Ok Voici les téléphones disponible en vente taper le numéro correspondant a votre choix pour voir plus de détails : </p>')
+}
+
+function acceuil31(){
+retour.lieu = "a3" ;
+position.lieu = "acceuil31"
+simulateTyping('<p><strong>🤖Issiako_Service:</strong>Ok choisissez ;<br> 1-Telephone <br>2-Ordinateur <br>3-Licence Kaspersky anti-virus <br> 4-Montre intelligent <br> 5-Visitez notre boutique en ligne</p>')
+}
+function acceuil32(){
+retour.lieu = "a3" ;
+position.lieu = "acceuil32"
+simulateTyping('<p><strong>🤖Issiako_Service:</strong>Ok choisissez ;<br> 1-Telephone <br>2-Ordinateur <br> 3-Autres <br> 4-,Visitez notre boutique en ligne</p>')
+}
+function acceuil321(){
+retour.lieu = "a32" ;
+position.lieu = "saisiea321"
+simulateTyping('<p><strong>🤖Issiako_Service:</strong> Bien, d\'abord donnez moi la marque du téléphone : </p>')
+}
+function acceuil3211(){
+retour.lieu = "a321" ;
+position.lieu = "acceuil3211";
+simulateTyping('<p><strong>🤖Issiako_Service:</strong> vous souhaitez vendre un téléphone de marque ' + tel.marque + ' quel est l\'état du téléphone. Choisissez : <br> 1-Nouveau <br> 2-Ancien </p>')
+}
+function acceuil32111(){
+retour.lieu = "a3211" ;
+position.lieu = "saisiea32111";
+simulateTyping('<p><strong>🤖Issiako_Service:</strong> votre téléphone de marque ' + tel.marque + ' est nouveau, dite nous combien souhaitez vous le vendre? </p>')
+}
+
+function acceuil321111(){
+var prixs = tel.prix ;
+var prix = prixs.replace(/\s/g, '');
+if(prix > 90000 || prix < 10000 ){
+simulateTyping('<p><strong>🤖Issiako_Service:</strong> Désolé 😔 mais nous ne pouvons pas vous aidez a vendre un téléphone nouveau de marque ' + tel.marque + ' à  ' + tel.prix + ' F veuillez revoir votre prix </p>')}else{
+retour.lieu = "a32111" ;
+position.lieu = "saisiea321111";
+
+simulateTyping('<p><strong>🤖Issiako_Service:</strong> Votre prix est : ' + tel.prix + ' FCFA maintenant donnez moi un numéro de téléphone sur lequel je pourrais vous notifiez </p>')
+}
+}
+function acceuil3211111(){
+retour.lieu = "a321111" ;
+position.lieu = "acceuil3211111"; 
+simulateTyping('<p><strong>🤖Issiako_Service:</strong>Ok bien noté\, maintenant envoyez nous une photo du téléphone en question taper 1 et envoyé et cliquez sur l\'icône caméra 📷 qui va apparaître puis prenez la photo <br> tapez 1 pour continuer</p>')
+
+}
+
+function acceuil32111111(){
+retour.lieu = "a321111" ;
+position.lieu = "saisiea3211111"; 
+
+    let chatOutput = document.getElementById('chat-output');
+
+    chatOutput.innerHTML +=  `<form><label for="telphoto">Maintenant envoyé nous une photo du téléphone.</label><br><input type="file" id="telphoto" name="telphoto"> <input type="submit" id="btelphoto" value="Soumettre"></form>si vous avez pris la photo📸 tapez sur 1 pour continuer`
+document.getElementById("telphoto").style.display = "none";
+document.getElementById("btelphoto").style.display = "none";
+      document.getElementById('telphoto').click();      
+
+}
+
+//debut acceuil3
+
+//traitement de fonction indépendante
+function cepannees(){
+
+retour.lieu = "a321111" ;
+position.lieu = "cepannees"; 
+nmbr.optioncursus = nmbr.optioncursus - 1 ;
+simulateTyping('<p><strong>🤖Issiako_Service:</strong> Ok dite moi quelle année avez vous eu votre CEP \? </p>')
+}
+function cepetablissement(){
+
+retour.lieu = "a321111" ;
+position.lieu = "cepetablissement"; 
+nmbr.optioncursus = nmbr.optioncursus - 1 ;
+simulateTyping('<p><strong>🤖Issiako_Service:</strong> Ok vous avez eu le cep en ' + cv.cepannees + ' \, maintenant dite moi dans quelle établissement \? </p>')
+}
+
+function bepcannees(){
+
+retour.lieu = "a" ;
+position.lieu = "bepcannees"; 
+nmbr.optioncursus = nmbr.optioncursus - 1 ;
+simulateTyping('<p><strong> Ok c\'est noté maintenant passons au BEPC quelle années l\'avez vous eu </p>')}
+function bepcetablissement(){
+retour.lieu = "a" ;
+position.lieu = "bepcetablissement"; 
+nmbr.optioncursus = nmbr.optioncursus - 1 ;
+simulateTyping('<p><strong> Donc vous avez eu votre BEPC en ' + cv.bepcannees + ' Dans quelle Établissement avez vous eu votre BEPC. <br>si vous êtes CL pouvez mentionner Candidat Libre </p>')}
+function bacannees(){
+retour.lieu = "a" ;
+position.lieu = "bacannees"; 
+nmbr.optioncursus = nmbr.optioncursus - 1 ;
+simulateTyping('<p><strong> Ok c\'est noté aussi\!  continuons quand en quel année avez vous eu le Baccalauréat </p>')}
+
+function bacetablissement(){
+retour.lieu = "a" ;
+position.lieu = "bacetablissement"; 
+nmbr.optioncursus = nmbr.optioncursus - 1 ;
+simulateTyping('<p><strong> Vous avez eu votre Bac en ' + cv.bacannees + ' \, c\'est compris \! maintenant dite moi dans quelle Établissement avez vous eu le Bac?</p>')}
+function licencannees(){
+retour.lieu = "a" ;
+position.lieu = "licencannees"; 
+nmbr.optioncursus = nmbr.optioncursus - 1 ;
+simulateTyping('<p><strong> Ok c\'est noté aussi\!  parlons de l\'université\, en quel année avez vous eu la Licence</p>')}
+
+function licencetablissement(){
+retour.lieu = "a" ;
+position.lieu = "licencetablissement"; 
+nmbr.optioncursus = nmbr.optioncursus - 1 ;
+simulateTyping('<p><strong> Vous avez eu votre Bac en ' + cv.licencannees + ' \, c\'est compris \! maintenant dite moi dans quelle Université avez vous eu la licence<?/p>')}
+function niveau(){
+position.lieu = "niveau"; 
+if(precedant.optioncursus == 2){
+precedant.niveau = "ceptroisieme"
+simulateTyping('<p><strong>🤖Issiako_Service:</strong> Après votre CEP vous avez arrêter ou continuer votre carrière scolaires en quelle classe ? choisissez :<br> 1-Classe de 6ème <br> 2-Classe de 5ème <br> 3-Classe de 4-ème <br> 4-Classe de 3ème <br> 5-Aucun</p>')
+}else if(precedant.optioncursus == 4){
+precedant.niveau = "bepcterminal"
+simulateTyping('<p><strong>🤖Issiako_Service:</strong> Après votre BEPC vous avez arrêter ou continuer votre carrière scolaires en quelle classe ? choisissez :<br> 1-Classe de seconde <br> 2-Classe de première <br> 3-Classe de Terminale <br> <br> 4-Aucun</p>')
+}else if(precedant.optioncursus == 6){
+precedant.niveau = "bacuniversite"
+simulateTyping('<p><strong>🤖Issiako_Service:</strong> Après votre Licence vous êtes allez a l\'université  \? si oui choisissez le niveau :<br> 1-En 1ère année <br> 2-En 2ème année <br> 3-En 3ème année <br> <br> 4-J\'ai pas fait l\'université</p>')
+}else if(precedant.optioncursus == "aucun"){
+precedant.niveau = "cp1cm2"
+simulateTyping('<p><strong>🤖Issiako_Service:</strong><br> Ok \, mais avez vous un niveau scolaire :<br> 1-CP1 <br> 2-CP2 <br> 3-CE1 <br> <br> 4-CE2 <br> 5-CM1 <br> 6-CM2 <br> 7-J\'ai pas fréquenté</p>')
+}else{
+simulateTyping('<p><strong>🤖Issiako_Service:</strong>Désolé😔 mais nous avons rencontré une erreur \, ressayez svp \!\!\! </p>')
+}
+
+}
+function niveauannee(){
+position.lieu = "niveauannee"; 
+simulateTyping('<p><strong>🤖Issiako_Service:</strong><br> Donc vous avez le niveau ' + cv.niveau + ' ok c\'est bien noté☺\️,maintenant dite moi dans en quelle année avez vous frequenté cette classe \?\?\?</p>')}
+function niveauetablissement(){
+position.lieu = "niveauetablissement"; 
+simulateTyping('<p><strong>🤖Issiako_Service:</strong><br>  Vous  avez eu le niveau ' + cv.niveau  + ' en ' + cv.niveauannee + ' ok j\'ai bien compris 😊maintenant dite moi dans quelle établissement avez vous fréquenté cette classe \?</p>')}
+function formation(){
+position.lieu = "formation"
+simulateTyping('<p><strong>🤖Issiako_Service:</strong><br>  Bravo 👏 \!\!\! \, Nous en avons fini avec votre cursus scolaire \, maintenant intéressons nous a vos formations professionnelles avez vous déjà participé a une formation\?\?\?</p>')
+}
+function formationnom(){
+position.lieu = "formationnom"
+nmbr.formation = nmbr.formation + 1
+if(nmbr.formation == 1){
+simulateTyping('<p><strong>🤖Issiako_Service:</strong> Ok nous allons faire étapes par étapes d\'abord quel est le nom de votre ' + nmbr.formation +  ' ère formation \?\?</p>')
+}else{
+simulateTyping('<p><strong>🤖Issiako_Service:</strong> Ok super c\'est bon pour la formation \<\<  ' + precedant.formationnom + '  \>\>continuons avec une autre.Donnez moi le nom de votre  ' + nmbr.formation +  ' ème formation \?\? Ou si vous n\'avez pas participer a une autre formation envoyer moi \"Fin\"  </p>')
+}
+}
+function formationannee(){
+position.lieu = "formationannee"
+simulateTyping('<p><strong>🤖Issiako_Service:</strong>Ok maintenant dite moi en quelle année vous avez fait la formation : \<\< ' + precedant.formationnom + ' \>\> \?\?</p>')
+}
+function formationdiplome(){
+position.lieu = "formationdiplome"
+simulateTyping('<p><strong>🤖Issiako_Service:</strong>Ok c\'est bien noté avez vous eu un diplôme \/ une Attestation pour cette formation\? si oui entrez le nom du diplôme sinon entrez \"Non\" </p>')
+}
+function formationlieu(){
+position.lieu = "formationlieu"
+simulateTyping('<p><strong>🤖Issiako_Service:</strong>C\'est bien où avez vous fait la formation\?\? Envoyez moi le nom du lieu ou établissement ou vous avez effectué la formation </p>')
+
+}
+function experience(){
+position.lieu = "experience"
+simulateTyping('<p><strong>🤖Issiako_Service:</strong><br> Ok c\'est bien maintenant allons du côté des expériences professionnelles\, Avez vous  des expériences de travail attesté \?\?\? Cette à dire des attestations qui prouve que vous avez travaillez dans un structure </p>')
+}
+function experiencelieu(){
+position.lieu = "experiencelieu"
+nmbr.experience = nmbr.experience + 1
+if(nmbr.experience == 1){
+simulateTyping('<p><strong>🤖Issiako_Service:</strong><br> Ok pour commencer vous allez me donner le nom de la structure ou vous avez travaillé pour la 1ère expérience \?\?\?</p>')
+}else{
+simulateTyping('<p><strong>🤖Issiako_Service:</strong><br> Ok pour commencer vous allez me donner le nom de la structure ou vous avez travaillé pour la 2 ème expérience \?\?\? </p>')
+
+}}
+
+</script>
+
+
+
+</body>
+</html>
